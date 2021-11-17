@@ -38,8 +38,8 @@ function Show(props) {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    name="name"
-                    value={editForm.name}
+                    name="title" 
+                    value={editForm.title}
                     onChange={handleChange} />
                 <input
                     type="text"
