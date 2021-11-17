@@ -24,7 +24,7 @@ const handleSubmit = (event) => {
   props.createBookmarks(bookmarks)
   setBookmarks({
     title: "",
-    url: "
+    url: ""
   })
 }
 
