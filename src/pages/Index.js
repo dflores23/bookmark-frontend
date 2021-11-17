@@ -35,7 +35,7 @@ function Index(props) {
 
     return (
         <>
-            <Form />
+            <Form {...props}/>
             {props.bookmarks ? loaded() : loading()}
             
             
