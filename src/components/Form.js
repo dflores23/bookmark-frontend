@@ -34,16 +34,18 @@ return (
       <input placeholder="Title"
         type="text"
         title="title"
+        placeholder="Website Name"
         value={bookmarks.title}
         onChange={handleChange}
       />
       <input placeholder="URL"
         type="text"
         title="url"
+        placeholder="URL (must start with https...)"
         value={bookmarks.url}
         onChange={handleChange}
       />
-      <button>Add Bookmark</button>
+      <button className="update-btn">Add Bookmark</button>
     </form>
   
   </section>
