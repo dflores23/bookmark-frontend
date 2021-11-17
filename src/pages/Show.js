@@ -1,31 +1,38 @@
 import { useState } from 'react';
+import {useParams, useNavigate} from "react-router-dom"
 
-function Show() {
-    const id = props.match.params.id;
+function Show(props) {
+    
+    const { id } = useParams()
+    const navigate = useNavigate()
+    console.log(id)
     const bookmarks = props.bookmarks
-    const bookmark = bookmarks.find(bookmark => bookmark.id === id)
-}
-const [editForm, setEditForm] = useState(bookmark)  //bookmark is the state
+    console.log(bookmarks)
+    const bookmark = bookmarks.find(bookmark => bookmark._id === id)
+    console.log(bookmark)
 
-const handleChange = (event) => {
-    setEditForm({ ...setEditForm, [event.target.name]: event.target.value });
-}
+    const [editForm, setEditForm] = useState(bookmark)  //bookmark is the state
 
-const handleSubmit = (event) => {
-    event.preventDefault();
-    props.editBookmark(bookmark.id, editForm);
-    props.history.push(`/bookmarks/${bookmark.id}`);
-}
+    const handleChange = (event) => {
+        setEditForm({ ...setEditForm, [event.target.name]: event.target.value });
+    }
 
-const removeBookmark = (event) => {
-    event.preventDefault();
-    props.removeBookmark(bookmark.id);
-    props.history.push('/');
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        props.updateBookmark(editForm, bookmark._id);
+        navigate(`/`);
+    }
+
+    const removeBookmark = (event) => {
+        event.preventDefault();
+        props.deleteBookmark(bookmark._id);
+        navigate('/');
+    }
 
 
-    return (
-        <div>
-            <h1>{bookmark.name}</h1>
+        return (
+            <div>
+                <h1>{bookmark.name}</h1>
             <h1>{bookmark.url}</h1>
             <button id="delete" onClick={removeBookmark}>Remove Bookmark</button>
             <form onSubmit={handleSubmit}>
@@ -41,10 +48,10 @@ const removeBookmark = (event) => {
                     onChange={handleChange} />
                 <input type="submit" value="Submit" />
             </form>
-        </div>
+            </div>
 
-    )
-}
+        )
+    }
 
 export default Show;
 
