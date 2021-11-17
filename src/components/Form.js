@@ -31,13 +31,13 @@ const handleSubmit = (event) => {
 return (
   <section>
     <form onSubmit={handleSubmit}>
-      <input
+      <input placeholder="Title"
         type="text"
         title="title"
         value={bookmarks.title}
         onChange={handleChange}
       />
-      <input
+      <input placeholder="URL"
         type="text"
         title="url"
         value={bookmarks.url}
