@@ -5,6 +5,7 @@ import Show from "../pages/Show"
 
 function Main(props) {
     const [bookmarks, setBookmarks] = useState(null);
+    let count = 0
 
     const URL = "https://ringo-bookmark.herokuapp.com/bookmark/";
 
@@ -22,12 +23,14 @@ function Main(props) {
             },
             body: JSON.stringify(bookmark),
         })
+        getBookmarks()
     }
 
     const deleteBookmark = async (id) => {
         await fetch(URL + id, {
             method: "delete"
         })
+        getBookmarks()
     }
 
     const updateBookmark = async (bookmark, id) => {
@@ -41,7 +44,7 @@ function Main(props) {
 
     }
 
-    useEffect(() => getBookmarks(), [])
+    useEffect(() => getBookmarks(), [count])
     return (
         <main>
             <Routes>
