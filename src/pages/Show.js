@@ -33,7 +33,7 @@ function Show(props) {
         return (
             <div>
             <h1>{bookmark.title}</h1>
-            <button id="delete" onClick={removeBookmark}>Remove Bookmark</button>
+            <button className="remove" id="delete" onClick={removeBookmark}>Remove Bookmark</button>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

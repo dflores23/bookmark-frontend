@@ -20,7 +20,7 @@ function Index(props) {
                 <div key={_id} className="bookmark">
                     <a href={url}> <p>{title}</p></a>
                     <Link to={`/${_id}`}> <button className="update-btn">Update Bookmark</button></Link>
-                    <button id={_id} onClick={(e)=>removeBookmark(e)}>x</button>
+                    <button className="delete" id={_id} onClick={(e)=>removeBookmark(e)}>x</button>
 
                 </div>
             )

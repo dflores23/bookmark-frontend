@@ -25,3 +25,40 @@ STYLING HEADER
 /*
 -------------------------------------------------
 */
+
+input {
+  width: 25%;
+  margin: 3rem 0.5rem;
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.header {
+  width: auto;
+  margin: 1rem 0.5rem;
+  padding: 0.7rem;
+}
+
+.update-btn{
+  width: 25%;
+  margin: .5rem 0.5rem;
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.delete  {
+  width: 5%;
+  height: 2.6rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.remove {
+  width: 15%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255); 
+}
