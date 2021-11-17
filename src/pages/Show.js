@@ -45,7 +45,7 @@ function Show(props) {
                     name="url"
                     value={editForm.url}
                     onChange={handleChange} />
-                <input type="submit" value="Submit" />
+                <input className="remove" type="submit" value="Submit" />
             </form>
             </div>
 
