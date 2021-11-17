@@ -24,7 +24,7 @@ const handleSubmit = (event) => {
   props.createBookmarks(bookmarks)
   setBookmarks({
     title: "",
-    url: ""
+    url: "
   })
 }
 
@@ -34,12 +34,14 @@ return (
       <input
         type="text"
         title="title"
+        placeholder="Website Name"
         value={bookmarks.title}
         onChange={handleChange}
       />
       <input
         type="text"
         title="url"
+        placeholder="URL (must start with https...)"
         value={bookmarks.url}
         onChange={handleChange}
       />

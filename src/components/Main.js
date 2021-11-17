@@ -40,7 +40,11 @@ function Main(props) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(bookmark)
+           
+            
         })
+        getBookmarks()
+
 
     }
 
