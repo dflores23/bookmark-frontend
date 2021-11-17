@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import Form from "../components/Form"
 
@@ -35,7 +34,7 @@ function Index(props) {
 
     return (
         <>
-            <Form />
+            <Form {...props}/>
             {props.bookmarks ? loaded() : loading()}
             
             
