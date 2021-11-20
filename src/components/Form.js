@@ -31,14 +31,14 @@ const handleSubmit = (event) => {
 return (
   <section>
     <form onSubmit={handleSubmit}>
-      <input placeholder="Title"
+      <input 
         type="text"
         title="title"
         placeholder="Website Name"
         value={bookmarks.title}
         onChange={handleChange}
       />
-      <input placeholder="URL"
+      <input 
         type="text"
         title="url"
         placeholder="URL (must start with https...)"
